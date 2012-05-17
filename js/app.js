@@ -123,7 +123,7 @@ $(document).ready(function() {
 		data: {
 			// this query handles moderation - q: "select * from csv where url='https://docs.google.com/spreadsheet/pub?key=0AgQJ7FGUGIp_dG9JVjNHYmR2aWF4ckZWdU1JMU9VZHc&output=csv&range=B1%3AG78' and columns='Palette,Purse,Name,Postcode,Notable quality,Approved?' and Approved_='y'",
 			// NB: for 5-minute caching, add '&_maxage=3600'
-			q: "select * from csv where url='https://docs.google.com/spreadsheet/pub?key=0AgQJ7FGUGIp_dG9JVjNHYmR2aWF4ckZWdU1JMU9VZHc&output=csv&range=B1%3AG78' and columns='Palette,Purse,Name,Postcode,Notable quality,Approved?'",
+			q: "select * from csv where url='https://docs.google.com/spreadsheet/pub?key=0AgQJ7FGUGIp_dG9JVjNHYmR2aWF4ckZWdU1JMU9VZHc&output=csv&range=B2%3AG78' and columns='Palette,Purse,Name,Postcode,Notable quality,Approved?'",
 			format: 'json'
 		},
 		dataType: 'jsonp',
