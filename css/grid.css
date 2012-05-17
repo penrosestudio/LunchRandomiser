@@ -1,0 +1,325 @@
+/*
+
+.....................................
+
+jBase - 24 col Grid 
+
+http://www.withjandj.com/jbase
+https://github.com/Joshuwar/fragments
+
+Licensed under GPL and MIT.	
+
+.....................................
+
+TO-DO
+
+- check ie6 & ie7 are compatible with row system (if not, make sure it doesn't break anything else!)
+	- will require selectivizr
+	- maybe only support this feature in modern browsers
+
+		
+
+		Generic & Global
+		
+................................................................................................ */
+
+.grid1col, 
+.grid2col, 
+.grid3col, 
+.grid4col, 
+.grid5col, 
+.grid6col, 
+.grid7col, 
+.grid8col, 
+.grid9col, 
+.grid10col, 
+.grid11col, 
+.grid12col {
+/* 
+	keep this here in case you need to apply something to all column sizes
+*/ 
+}
+
+body {
+	min-width: 970px;
+}
+
+
+
+/* 		Basic Columns
+
+................................................................................................ */
+
+.grid1col {
+	width:37px;
+}
+
+.grid2col {
+	width:76px;
+}
+
+.grid3col {
+	width:117px;
+}
+
+.grid4col {
+	width:157px;
+}
+
+.grid5col {
+	width:197px;
+}
+
+.grid6col {
+	width:237px;
+}
+
+.grid7col {
+	width:277px;
+}
+
+.grid8col {
+	width:316px;
+}
+
+.grid9col {
+	width:357px;
+}
+
+.grid10col {
+	width:397px;
+}
+
+.grid11col {
+	width:437px;
+}
+
+.grid12col {
+	width:477px;
+}
+
+.grid13col {
+	width:517px;
+}
+
+.grid14col {
+	width:557px;
+}
+
+.grid15col {
+	width:597px;
+}
+
+.grid16col {
+	width:637px;
+}
+
+.grid17col {
+	width:677px;
+}
+
+.grid18col {
+	width:717px;
+}
+
+.grid19col {
+	width:757px;
+}
+
+.grid20col {
+	width:797px;
+}
+
+.grid21col {
+	width:837px;
+}
+
+.grid22col {
+	width:877px;
+}
+
+.grid23col {
+	width:917px;
+}
+
+.grid24col {
+	width:957px;
+}
+
+
+
+
+/* 		Columns with boxes
+
+................................................................................................ */
+
+.grid1col.box, .ie6 .grid1col-box {
+	width: 10px;
+}
+
+.grid2col.box, .ie6 .grid2col-box {
+	width: 50px;
+}
+
+.grid3col.box, .ie6 .grid3col-box {
+	width: 90px
+}
+
+.grid4col.box, .ie6 .grid4col-box {
+	width: 130px
+}
+
+.grid5col.box, .ie6 .grid5col-box {
+	width: 170px
+}
+
+.grid6col.box, .ie6 .grid6col-box {
+	width: 210px;
+}
+
+.grid7col.box, .ie6 .grid7col-box {
+	width: 250px
+}
+
+.grid8col.box, .ie6 .grid8col-box {
+	width: 290px;
+}
+
+.grid9col.box, .ie6 .grid9col-box {
+	width: 330px;
+}
+
+.grid10col.box, .ie6 .grid10col-box {
+	width: 370px
+}
+
+.grid11col.box, .ie6 .grid11col-box {
+	width: 410px
+}
+
+.grid12col.box, .ie6 .grid12col-box {
+	width: 450px;
+}
+
+.grid13col.box, .ie6 .grid13col-box {
+	width: 490px;
+}
+
+.grid14col.box, .ie6 .grid14col-box {
+	width: 530px;
+}
+
+.grid15col.box, .ie6 .grid15col-box {
+	width: 570px
+}
+
+.grid16col.box, .ie6 .grid16col-box {
+	width: 610px
+}
+
+.grid17col.box, .ie6 .grid17col-box {
+	width: 650px
+}
+
+.grid18col.box, .ie6 .grid18col-box {
+	width: 690px;
+}
+
+.grid19col.box, .ie6 .grid19col-box {
+	width: 730px
+}
+
+.grid20col.box, .ie6 .grid20col-box {
+	width: 770px;
+}
+
+.grid21col.box, .ie6 .grid21col-box {
+	width: 810px;
+}
+
+.grid22col.box, .ie6 .grid22col-box {
+	width: 850px
+}
+
+.grid23col.box, .ie6 .grid23col-box {
+	width: 890px
+}
+
+.grid24col.box, .ie6 .grid24col-box {
+	width: 930px;
+}
+
+
+
+
+/*			Modifiers
+
+................................................................................................ */
+
+
+.marginleft {
+	margin-left:10px;
+}
+
+.marginright {
+	margin-right:10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearboth {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.alignleft {
+	text-align: left;
+}
+
+.aligncentre {
+	text-align: center;
+}
+
+/*			Box modifiers
+
+................................................................................................ */
+
+
+.right.outbox, .outboxright {
+	margin-right: -10px;
+	padding: 12px 10px;
+	margin-left: 0px;
+}
+
+.outbox, .outboxleft {
+	margin-left: -10px;
+	padding: 12px 10px;
+	margin-right: 0px;
+}
+
+
+.box {
+	padding: 12px 10px 12px;
+	margin-bottom: 24px;
+}
+
+
+/* browser fixes */
+
+.ie6.box {
+	width: auto;
+}

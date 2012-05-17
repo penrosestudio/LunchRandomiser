@@ -1,0 +1,14 @@
+#mapCanvas {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}
+
+#topSection {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#findAnother {
+	display: none;
+}

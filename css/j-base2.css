@@ -1,0 +1,425 @@
+/*
+
+.....................................
+
+jBase - Baseline & Typographic defaults 
+
+http://www.withjandj.com/jbase
+https://github.com/Joshuwar/fragments
+
+Licensed under GPL and MIT.	
+
+.....................................
+
+
+		TO-DO
+		
+................................................................................................
+
+- a jquery  script which checks out <p>s within an element of a certain class, checks their height, and then extends their bottom margin to the nearest multiple of 24px - so that new paragraphs come back in rhythm 
+
+- fix the 'p.large' baseline (1px out of step) 
+
+- forms
+
+- buttons (?)
+
+- image (& caption?) sizes, boxes etc
+
+- Sort out the push/pull controllers with the .small and .large modifiers (padding overriden etc) - try to do this without conditional combinators... ?
+
+*/
+
+
+
+/*		Generic & Global
+		
+................................................................................................ */
+
+
+body {
+	font-size: 15px;
+	line-height: 18px;
+	position: relative;
+}
+
+html {
+}
+
+.jbasewrap {
+	width: 970px;
+	margin: auto;
+	position: relative;
+	padding: 0px 10px;
+}
+
+a {
+	text-decoration: underline;
+}
+
+
+
+
+/*		Typography 
+
+................................................................................................ */
+
+p {
+	margin-bottom: 24px;	
+}
+
+.smallcaps {
+	font-variant: small-caps;
+}
+
+strong {
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+dfn {
+	font-weight: bold;
+}
+
+em, dfn {
+	font-style: italic;	
+}
+
+address {
+	font-style: italic;
+}
+
+pre, code, tt {
+	font-family: 'andale mono','lucida console',monospace;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted;
+}
+
+table {
+	margin-bottom: 24px;
+}
+
+th {
+}
+
+ul, ol {
+	margin: 0 0 24px 24px;
+	
+}
+
+ul li, ol ul li {
+	list-style: disc;
+}
+
+ol li, ul ol li {
+	list-style: decimal;
+}
+
+li ul, li ol {
+	margin: 0 0 0 24px;
+} 
+
+
+dl {
+	margin-bottom: 24px;
+}
+
+dl dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 24px;
+}
+
+blockquote {
+	font-style: italic;
+	padding-left: 24px;
+}
+
+hr {
+	border: none;
+	height: 1px; 
+	color: #858585;
+	background: #858585;
+	margin: -1px 0 12px 0;
+}
+
+p.small, span.small, ul.small, ol.small, blockquote.small {
+	font-size: 12px;
+	line-height: 18px;
+	padding: 3px 0px; 
+}
+
+p.large, span.large, ul.large, ol.large, blockquote.large  {
+	font-size: 20px;
+    line-height: 30px;
+    margin: -5px 0 23px;
+    
+}
+
+sup {
+	vertical-align: top;
+	font-size: 12px;
+}
+sub {
+	vertical-align: bottom;
+	font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+
+h1 {
+	font-size: 32px;
+    line-height: 36px;
+    margin: 0px 0px 12px;
+}
+
+h2 {
+	font-size: 28px;
+	line-height: 30px;
+	margin-bottom: 14px;
+	padding-top: 4px;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 30px; 		
+	margin-bottom: 13px;
+	padding-top: 5px;
+}
+
+h4 {
+	font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    padding-top: 4px;	
+}
+
+h5 {
+	font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    padding-top: 4px;
+}
+
+h6 {
+	font-size: 14px;
+	line-height: 24px;		
+	margin-bottom: 12px; 	
+}
+
+
+
+
+h1.large {
+	font-size: 40px;
+    line-height: 54px;
+    margin: 0 0 12px;
+    padding-top: 0;
+}
+
+h2.large {
+	font-size: 32px;
+    line-height: 36px;
+    margin: 0px 0px 12px;
+    padding-top: 0px
+}
+
+h3.large {
+	font-size: 28px;
+	line-height: 30px;
+	margin-bottom: 14px;
+	padding-top: 4px;
+}
+
+h4.large {
+	font-size: 24px;
+	line-height: 30px; 		
+	margin-bottom: 13px;
+	padding-top: 5px;
+}
+
+h5.large {
+	font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    padding-top: 4px;
+}
+
+h6.large {
+	font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    padding-top: 4px;	
+}
+
+
+
+h1.small {
+	font-size: 28px;
+	line-height: 30px;
+	margin-bottom: 14px;
+	padding-top: 4px;
+}
+
+h2.small {
+	font-size: 24px;
+	line-height: 30px; 		
+	margin-bottom: 13px;
+	padding-top: 5px;
+}
+
+h3.small {
+	font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    padding-top: 4px;
+}
+
+h4.small {
+	font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    padding-top: 4px;
+}
+
+h5.small {
+	font-size: 14px;
+	line-height: 24px;		
+	margin-bottom: 12px; 
+	padding-top: 0px
+}
+
+h6.small {
+	font-size: 12px;
+	line-height: 24px;		
+	margin-bottom: 12px; 
+}
+
+
+h1.fixed, h2.fixed, h3.fixed, h4.fixed, h5.fixed, h6.fixed{
+	font-size: 14px;
+	line-height: 24px;		
+	margin-bottom: 12px; 
+	padding-top: 0px
+}
+
+
+
+
+/*			Div Modifiers 
+
+................................................................................................ */
+
+.push1 {
+	padding-top: 6px;
+}
+
+.push2 {
+	padding-top: 12px;
+}
+
+.push3 {
+	padding-top: 18px;
+}
+
+.push4 {
+	padding-top: 24px;
+}
+
+.pull1 {
+	margin-top: -6px;
+}
+
+.pull2 {
+	margin-top: -12px;
+}
+
+.pull3 {
+	margin-top: -18px;
+}
+
+.pull4 {
+	margin-top: -24px;
+}
+
+
+/* NEED to find a better way of doing this with small/large p's etc  - JB */
+
+p.small.push2, span.small.push2, ul.small.push2, ol.small.push2, blockquote.small.push2 {
+	padding-top: 15px;
+}
+
+.margintop {
+	margin-top: 24px;
+}
+.marginbottom {
+	margin-bottom: 24px;
+}
+.marginbottomsmall {
+	margin-bottom: 12px;
+}
+.margintopsmall {
+	margin-top: 12px;
+}
+
+.padtop {
+	padding-top: 24px;
+}
+
+.padtopsmall {
+	padding-top: 12px;
+}
+
+.padbottom {
+	padding-bottom: 24px;
+}
+.padbottomsmall {
+	padding-bottom: 12px;
+}
+
+.borderbottom {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 23px; /* JB - this may need modifiers for h1-6 and others, if that becomes necessary */ 
+
+}
+.bordertop {
+	border-top: 1px solid #ccc;
+	margin-top: -1px;
+}
+.bartop {
+	border-top: 6px solid #ccc;
+}
+.barbottom {
+	border-bottom: 6px solid #ccc;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+
+::selection			{ background:#ff5656; color:#fff; }
+::-moz-selection	{ background:#ff5656; color:#fff; }
+
+
+
+/*			Forms 
+................................................................................................ */
+
+
+
+
+/*			Buttons 
+
+................................................................................................ */
+
