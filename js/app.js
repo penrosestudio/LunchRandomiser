@@ -170,7 +170,7 @@ $(document).ready(function() {
 		chooseRandomVenue(function(venue) {
 			var postcode = venue.postcode;
 			$(that).text(venue.name);
-			$('#infoPanel').html("<p>"+venue.notable_quality+"</p><p>Suggested by <a href='twitter.com/"+venue.twitter+"'>@"+venue.twitter+"</a></p>");
+			$('#infoPanel').html("<p>"+venue.notable_quality+"</p><p>Suggested by <a href='http://twitter.com/"+venue.twitter+"'>@"+venue.twitter+"</a></p>");
 			$('#findAnother').show();
 			lookupAndCentre(postcode, true);
 		});
