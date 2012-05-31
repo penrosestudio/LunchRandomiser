@@ -79,6 +79,16 @@ function chooseRandomVenue(callback) {
 		callback(venue);
 }
 
+function sanitiseTwitter(twitter) {
+	if(!twitter) {
+		return "";
+	}
+	if(twitter.indexOf('@')===0) {
+		twitter = twitter.substring(1);
+	}
+	return twitter;
+}
+
 $(document).ready(function() {
 	// loading
 	/*
@@ -123,7 +133,7 @@ $(document).ready(function() {
 		data: {
 			// this query handles moderation - q: "select * from csv where url='https://docs.google.com/spreadsheet/pub?key=0AgQJ7FGUGIp_dG9JVjNHYmR2aWF4ckZWdU1JMU9VZHc&output=csv&range=B1%3AG78' and columns='Palette,Purse,Name,Postcode,Notable quality,Approved?' and Approved_='y'",
 			// NB: for 5-minute caching, add '&_maxage=3600'
-			q: "select * from csv where url='https://docs.google.com/spreadsheet/pub?key=0AgQJ7FGUGIp_dG9JVjNHYmR2aWF4ckZWdU1JMU9VZHc&output=csv&range=B2%3AG78' and columns='Palette,Purse,Name,Postcode,Notable quality,Approved?'",
+			q: "select * from csv where url='https://docs.google.com/spreadsheet/pub?key=0AgQJ7FGUGIp_dG9JVjNHYmR2aWF4ckZWdU1JMU9VZHc&output=csv&range=B2%3AH78' and columns='Palette,Purse,Name,Postcode,Notable quality,Twitter,Approved?'",
 			format: 'json'
 		},
 		dataType: 'jsonp',
@@ -133,7 +143,8 @@ $(document).ready(function() {
 					palette = item.Palette,
 					purse = item.Purse,
 					postcode = item.Postcode,
-					notable_quality = item.Notable_quality;
+					notable_quality = item.Notable_quality,
+					twitter = sanitiseTwitter(item.Twitter);
 				if(palettes.indexOf(palette)===-1) {
 					palettes.push(palette.toLowerCase());
 				}
@@ -145,7 +156,8 @@ $(document).ready(function() {
 					palette: palette,
 					purse: purse,
 					postcode: postcode,
-					notable_quality: notable_quality
+					notable_quality: notable_quality,
+					twitter: twitter
 				});
 			});
 		}
@@ -158,7 +170,7 @@ $(document).ready(function() {
 		chooseRandomVenue(function(venue) {
 			var postcode = venue.postcode;
 			$(that).text(venue.name);
-			$('#infoPanel').text(venue.notable_quality);
+			$('#infoPanel').html("<p>"+venue.notable_quality+"</p><p>Suggested by <a href='twitter.com/"+venue.twitter+">'"+venue.twitter+"</a></p>");
 			$('#findAnother').show();
 			lookupAndCentre(postcode, true);
 		});
